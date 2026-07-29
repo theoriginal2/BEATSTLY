@@ -2873,6 +2873,9 @@ function initializeApp(){
     try{
 
 
+        setupMobileMenu();
+
+
         loadTheme();
 
 
@@ -2892,9 +2895,6 @@ function initializeApp(){
 
 
         setupAttachments();
-
-
-        setupMobileMenu();
 
 
         setupSettings();
@@ -2943,7 +2943,7 @@ function initializeApp(){
 
         showToast(
 
-            "Some features failed to load",
+            "Init error: " + (error && error.message ? error.message : error),
 
             "error"
 
